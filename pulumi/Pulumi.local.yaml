@@ -1,0 +1,11 @@
+encryptionsalt: v1:qfxISx2yGB8=:v1:OU3Kkl/CEq5Nvor0:dcvlx3YUhhprn1DSUOdYjElYzvNArg==
+config:
+  gcp:credentials: ../key.json
+  gcp:project: ensai-2024
+  gcp:region: europe-west1
+  gcp:zone: europe-west1-b
+  test:instanceTag: webserver
+  test:machineType: f1-micro
+  test:osImage: debian-11
+  test:servicePort: "80"
+  test:instanceName: christophe-pulumi-vm
