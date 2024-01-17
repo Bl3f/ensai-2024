@@ -1,0 +1,23 @@
+name: deploy to Composer
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Auth GCP gcloud
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v1'
+
+    - name: Upload extract DAG
+      run: gcloud composer environments --project ensai-2024 storage dags import --location europe-west1 --environment prod --source dags/extract_and_load_energy_data.py

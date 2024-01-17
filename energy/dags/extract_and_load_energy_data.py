@@ -18,7 +18,7 @@ def extract_and_load_to_gcs(url, name, ds=None):
     hook = SubprocessHook()
     folder = f"/tmp/download_{name}/{GCS_BUCKET_NAME}"
     filename = f"{folder}/{name}.csv"
-    hook.run_command(command=["bash", "-c", f"mkdir -p {folder} && curl {url} -o {filename}"])
+    hook.run_command(command=["bash", "-c", f"mkdir -p {folder} && curl -L {url} -o {filename}"])
 
     gcs_hook = GCSHook(gcp_conn_id="bigquery")
     gcs_hook.upload(
