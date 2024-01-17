@@ -1,0 +1,37 @@
+[
+  {
+    "name": "DATE_DEBUT",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "DATE_FIN",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "P_SOUSCRITE",
+    "type": "INTEGER",
+    "description": ""
+  },
+  {
+    "name": "PART_FIXE_HT",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "PART_FIXE_TTC",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "PART_VARIABLE_HT",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "PART_VARIABLE_TTC",
+    "type": "FLOAT",
+    "description": ""
+  }
+]

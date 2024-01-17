@@ -1,0 +1,127 @@
+[
+  {
+    "name": "annee",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "nom_commune",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "code_commune",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "nom_epci",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "code_epci",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "type_epci",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "nom_departement",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "code_departement",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "nom_region",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "code_region",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "domaine_de_tension",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "nb_sites_photovoltaique_enedis",
+    "type": "INTEGER",
+    "description": ""
+  },
+  {
+    "name": "energie_produite_annuelle_photovoltaique_enedis_mwh",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "nb_sites_eolien_enedis",
+    "type": "INTEGER",
+    "description": ""
+  },
+  {
+    "name": "energie_produite_annuelle_eolien_enedis_mwh",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "nb_sites_hydraulique_enedis",
+    "type": "INTEGER",
+    "description": ""
+  },
+  {
+    "name": "energie_produite_annuelle_hydraulique_enedis_mwh",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "nb_sites_bio_energie_enedis",
+    "type": "INTEGER",
+    "description": ""
+  },
+  {
+    "name": "energie_produite_annuelle_bio_energie_enedis_mwh",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "nb_sites_cogeneration_enedis",
+    "type": "INTEGER",
+    "description": ""
+  },
+  {
+    "name": "energie_produite_annuelle_cogeneration_enedis_mwh",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "nb_sites_autres_filieres_enedis",
+    "type": "INTEGER",
+    "description": ""
+  },
+  {
+    "name": "energie_produite_annuelle_autres_filieres_enedis_mwh",
+    "type": "FLOAT",
+    "description": ""
+  },
+  {
+    "name": "geo_shape",
+    "type": "STRING",
+    "description": ""
+  },
+  {
+    "name": "geo_point_2d",
+    "type": "STRING",
+    "description": ""
+  }
+]  

@@ -1,0 +1,182 @@
+[
+    {
+    "name": "operateur",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "annee",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "filiere",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "consoa",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "pdla",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "nombre_maille_secretisees_a",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "indquala",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "consoi",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "pdli",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "nombre_maille_secretisees_i",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "indquali",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "consot",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "pdlt",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "nombre_maille_secretisees_t",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "indqualt",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "consor",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "pdlr",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "nombre_maille_secretisees_r",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "indqualr",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "thermor",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "partr",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "consona",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "pdlna",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "nombre_maille_secretisees_na",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "indqualna",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "code_commune",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "libelle_commune",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "code_epci",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "libelle_epci",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "code_departement",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "libelle_departement",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "code_region",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "libelle_region",
+    "type": "STRING",
+    "description": ""
+    },
+    {
+    "name": "id_filiere",
+    "type": "INTEGER",
+    "description": ""
+    },
+    {
+    "name": "consototale",
+    "type": "FLOAT",
+    "description": ""
+    },
+    {
+    "name": "code_postal",
+    "type": "STRING",
+    "description": ""
+    }
+]
