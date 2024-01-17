@@ -3,6 +3,7 @@ import io
 import json
 import os
 
+from airflow.configuration import conf
 from airflow.decorators import dag, task
 from airflow.operators.dummy import DummyOperator
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
@@ -45,7 +46,7 @@ def extract_and_load_energy_data():
         url = config["url"]
         extract = task(task_id=f"extract_and_load_{name}")(extract_and_load_to_gcs)(url, name)
 
-        with open(f"dags/schema/{name}.json", "r") as f:
+        with open(f"{conf.get('core', 'dags_folder')}/schema/{name}.json", "r") as f:
             schema = json.load(f)
 
         to_bq = GCSToBigQueryOperator(

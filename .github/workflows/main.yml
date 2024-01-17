@@ -19,5 +19,11 @@ jobs:
     - name: 'Set up Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v1'
 
+    - name: Upload schema folder
+      run: gcloud composer environments --project ensai-2024 storage dags import --location europe-west1 --environment prod --source dags/schema/
+
+    - name: Upload sql folder
+      run: gcloud composer environments --project ensai-2024 storage dags import --location europe-west1 --environment prod --source dags/sql/
+
     - name: Upload extract DAG
       run: gcloud composer environments --project ensai-2024 storage dags import --location europe-west1 --environment prod --source dags/extract_and_load_energy_data.py
