@@ -42,6 +42,7 @@ jobs:
         run: |
           gcloud compute instances create-with-container prenoms-api-christophe \
             --container-image cblefari/prenoms:${{ github.sha }} \
+            --zone europe-west1-b \
             --container-env FLASK_PORT=80
 
       - name: Update API to GCP Compute Instance
@@ -49,4 +50,5 @@ jobs:
         run: |
           gcloud compute instances update-container prenoms-api-christophe \
             --container-image cblefari/prenoms:${{ github.sha }} \
+            --zone europe-west1-b \
             --container-env FLASK_PORT=80 
