@@ -24,3 +24,29 @@ jobs:
 
       - name: Docker push
         run: docker push cblefari/prenoms:${{ github.sha }}
+
+      - name: Auth GCP gcloud
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v1'
+
+      - name: Check if Compute Instance 'prenoms-api-christophe' exists
+        id: check
+        run: echo "INSTANCE_EXISTS=$(gcloud compute instances list | grep prenoms-api-christophe | wc -l | xargs)" >> "$GITHUB_OUTPUT"
+
+      - name: Create (for the first time) API to GCP Compute Instance
+        if: steps.check.outputs.INSTANCE_EXISTS == '0'
+        run: |
+          gcloud compute instances create-with-container prenoms-api-christophe \
+            --container-image cblefari/prenoms:${{ github.sha }} \
+            --container-env FLASK_PORT=80
+
+      - name: Update API to GCP Compute Instance
+        if: steps.check.outputs.INSTANCE_EXISTS != '0'
+        run: |
+          gcloud compute instances update-container prenoms-api-christophe \
+            --container-image cblefari/prenoms:${{ github.sha }} \
+            --container-env FLASK_PORT=80 
