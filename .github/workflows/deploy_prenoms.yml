@@ -11,10 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Debug 1
-        run: ls -l
-
       - uses: actions/checkout@v3
 
-      - name: Debug 2
-        run: ls -l
+      - name: Docker build
+        run: docker build -t prenoms ./prenoms
