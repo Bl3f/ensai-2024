@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 flask = "^3.0.1"
 scikit-learn = "^1.4.0"
+requests = "^2.31.0"
 
 
 [build-system]

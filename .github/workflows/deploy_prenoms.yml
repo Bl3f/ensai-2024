@@ -40,6 +40,8 @@ jobs:
 #          cache-from: type=registry,ref=cblefari/prenoms:buildcache
 #          cache-to: type=registry,ref=cblefari/prenoms:buildcache,mode=max
 
+  deploy:
+    steps:
       - name: Auth GCP gcloud
         uses: 'google-github-actions/auth@v1'
         with:
@@ -62,7 +64,8 @@ jobs:
             --container-image cblefari/prenoms:${{ github.sha }} \
             --tags http-server \
             --zone us-central1-a \
-            --container-env FLASK_PORT=80
+            --container-env FLASK_PORT=80 \
+            --container-env LLM_API=http://34.132.200.23
 
       - name: Update API to GCP Compute Instance
         if: steps.check.outputs.INSTANCE_EXISTS != '0'
@@ -70,4 +73,5 @@ jobs:
           gcloud compute instances update-container prenoms-api-christophe \
             --container-image cblefari/prenoms:${{ github.sha }} \
             --zone us-central1-a \
-            --container-env FLASK_PORT=80 
+            --container-env FLASK_PORT=80 \
+            --container-env LLM_API=http://34.132.200.23
