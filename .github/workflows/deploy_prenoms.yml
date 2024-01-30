@@ -26,6 +26,6 @@ jobs:
       with:
         context: ./prenoms/
         push: true
-        tags: cblefari/prenoms
+        tags: cblefari/prenoms:${{ github.sha }}
         cache-from: type=registry,ref=cblefari/prenoms:buildcache
         cache-to: type=registry,ref=cblefari/prenoms:buildcache,mode=max
