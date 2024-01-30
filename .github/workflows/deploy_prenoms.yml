@@ -27,5 +27,5 @@ jobs:
         context: ./prenoms/
         push: true
         tags: cblefari/prenoms
-        cache-from: type=registry,ref=cblefari/gender-predictor:buildcache
-        cache-to: type=registry,ref=cblefari/gender-predictor:buildcache,mode=max
+        cache-from: type=registry,ref=cblefari/prenoms:buildcache
+        cache-to: type=registry,ref=cblefari/prenoms:buildcache,mode=max
