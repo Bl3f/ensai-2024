@@ -41,6 +41,8 @@ jobs:
 #          cache-to: type=registry,ref=cblefari/prenoms:buildcache,mode=max
 
   deploy:
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Auth GCP gcloud
         uses: 'google-github-actions/auth@v1'
