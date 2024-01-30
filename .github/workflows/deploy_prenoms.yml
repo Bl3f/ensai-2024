@@ -11,5 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Afficher la date
-        run: date
+      - name: Debug 1
+        run: ls -l
+
+      - uses: actions/checkout@v3
+
+      - name: Debug 2
+        run: ls -l
