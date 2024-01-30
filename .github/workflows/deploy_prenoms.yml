@@ -1,0 +1,15 @@
+name: Build and deploy prenoms API
+
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Afficher la date
+        run: date
