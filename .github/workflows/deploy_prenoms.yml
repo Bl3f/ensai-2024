@@ -25,6 +25,21 @@ jobs:
       - name: Docker push
         run: docker push cblefari/prenoms:${{ github.sha }}
 
+#      - name: Log in to Docker Hub
+#        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+#        with:
+#          username: cblefari
+#          password: ${{ secrets.DOCKER_PASSWORD }}
+#
+#      - name: Build and push Docker image
+#        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+#        with:
+#          context: ./prenoms/
+#          push: true
+#          tags: cblefari/prenoms:${{ github.sha }}
+#          cache-from: type=registry,ref=cblefari/prenoms:buildcache
+#          cache-to: type=registry,ref=cblefari/prenoms:buildcache,mode=max
+
       - name: Auth GCP gcloud
         uses: 'google-github-actions/auth@v1'
         with:
@@ -36,6 +51,9 @@ jobs:
       - name: Check if Compute Instance 'prenoms-api-christophe' exists
         id: check
         run: echo "INSTANCE_EXISTS=$(gcloud compute instances list | grep prenoms-api-christophe | wc -l | xargs)" >> "$GITHUB_OUTPUT"
+
+      - name: Debug check value
+        run: echo '${{ steps.check.outputs.INSTANCE_EXISTS }}'
 
       - name: Create (for the first time) API to GCP Compute Instance
         if: steps.check.outputs.INSTANCE_EXISTS == '0'
@@ -51,6 +69,5 @@ jobs:
         run: |
           gcloud compute instances update-container prenoms-api-christophe \
             --container-image cblefari/prenoms:${{ github.sha }} \
-            --tags http-server \
             --zone us-central1-a \
             --container-env FLASK_PORT=80 
